@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.windows3.dao.CustomerDao">
     <resultMap id="customerMap" type="Customer" >
+
         <id column="id" property="id"></id>
         <result column="CUSTOMER_NAME" property="customerName"></result>
         <result column="CUSTOMER_PASSWORD" property="customerPassword"></result>
@@ -137,10 +138,10 @@
 
     </update>
 
-    <delete id="deleteCustomer" parameterType="Customer">
-        DELETE    FROM  CUSTOMER
-       <include refid="checkid"></include>
-    </delete>
+    <!--<delete id="deleteCustomer" parameterType="Customer">-->
+        <!--DELETE    FROM  CUSTOMER-->
+       <!--<include refid="checkid"></include>-->
+    <!--</delete>-->
 
   <sql id="queryCustomer">
         SELECT  *  FROM customer
